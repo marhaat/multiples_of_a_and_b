@@ -1,9 +1,10 @@
 # multiples_of_a_and_b
 Multiples of A and B
 
-Take input file containing rows of number data, and outputs multiples of numbers below a goal number.
+Take input file containing rows of number data, and outputs multiples of numbers below a goal value.
 
 Input file data must be in the following format:
+A B goal
 Example input file content:
 5 8 31
 4 7 20
