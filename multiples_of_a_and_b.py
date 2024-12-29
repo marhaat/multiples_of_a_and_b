@@ -16,14 +16,12 @@ def main():
     with open(sys.argv[1], 'r') as inputfile:
         for line in inputfile:
             # Read line contents to variables
-            a = int(line.split(' ')[0])
-            b = int(line.split(' ')[1])
-            goal = int(line.split(' ')[2])
+            a, b, goal = np.array(line.split(' '), dtype=int)
 
             # Use numpy arange to get list of multiples of a and b under goal value
             # Union of a and b lists sorts values and removes duplicates
             # Remove 0 from the multiples list
-            multiples = np.delete(np.union1d(np.arange(0, goal, a), np.arange(0, goal, b)), 0).tolist()
+            multiples = np.delete(np.union1d(np.arange(0, goal, a), np.arange(0, goal, b)), 0)
     
             # Create a string from list items
             # Add goal and colon in front of the string
